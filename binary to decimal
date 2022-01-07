@@ -1,0 +1,24 @@
+package binary_to_decimal;
+import java.util.*;
+
+public class Binary_to_Decimal {
+
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a binary number");
+        int binary = sc.nextInt();
+        int rem=0;
+        int sum=0;
+        int i=1;
+        while(binary!=0){
+            rem = binary%10;
+            sum=sum+(rem * i);
+            i = i*2;
+            binary = binary / 10;
+        }
+        System.out.println("Decimal no is "+sum);
+    }
+    
+}
